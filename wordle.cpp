@@ -63,19 +63,6 @@ std::set<std::string> wordle(
 
     insertAlphabet (combos, results, in.size(), empty);
 
-    // for (auto s: results){
-    //     cout << s << endl;
-    // }
-
-    //testing search
-    // string wordz = "adz";
-    // int hello = search (dict, wordz);
-    // cout << "RESULT OF SEARCH: " << hello <<endl;
-
-    // for (auto s: results){
-    //     cout << "ORIGINAL: " << s << endl;
-    // }
-
     int validity = 0;
     auto it = results.begin();
     while (it != results.end()){
@@ -88,19 +75,6 @@ std::set<std::string> wordle(
             ++it;
         }
     }
-
-    // for (auto s : results){
-    //     cout << "word: " << s << endl;
-    //     // cout << "validity before: " << validity << endl;
-    //     validity = search (dict, s);
-    //     // cout << "validity after search: " << validity << endl;
-    //     if (validity == -1){
-    //         // cout << "ERASING!" <<endl;
-    //         results.erase(s);
-    //     } else {
-    //         cout << "valid word: " << s << endl;
-    //     }
-    // }
 
     return results;
 }
